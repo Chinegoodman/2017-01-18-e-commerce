@@ -1,0 +1,147 @@
+html{
+    font-size: 100px;
+}
+html,body{
+    height:100%;
+    background-color: #F2F2F2;
+}
+body{
+}
+header{
+    height:48px;
+    width:100%;
+    text-align: center;
+    /*margin-bottom: 8px;*/
+    position: fixed;
+    top:0;
+    z-index: 50;
+}
+.back-btn{
+    float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+    width:9px;
+    height:16px;
+}
+
+.order_top_status_lis{
+    position: absolute;
+    left:0;
+    top:48px;
+    width:100%;
+    height:25px;
+}
+.order_top_status_lis>li{
+    float: left;
+    margin-left: 0.36rem;
+    position: relative;
+    width:0.5rem;
+}
+.order_top_status_lis>li.selected:after{
+    content: '';
+    width:0.4rem;
+    height:0.02rem;
+    background-color: #BB0505;
+    position: absolute;
+    bottom:0;
+    left:0.05rem;
+}
+/*头部结束*/
+#content{
+    /*height:100%;*/
+    /*padding-top: 56px;*/
+    padding-top: 82px;
+}
+.allorder_lis{
+    display: none;
+}
+.allorder_lis.active{
+    display: block;
+}
+.order_li{
+    padding:0.15rem 0 0.1rem 0.2rem;
+    margin-bottom: 0.08rem;
+}
+.order_li_code{
+    height:0.16rem;
+    line-height: 0.16rem;
+    margin-bottom: 0.15rem;
+    position: relative;
+}
+.order_li_code>*{
+    float: left;
+}
+.order_li_pic_statu{
+    padding:0.1rem 0;
+    border-top:1px solid #E2E2E2;
+    border-bottom:1px solid #E2E2E2;
+    position: relative;
+}
+.order_li_pic_statu>*{
+    float: left;
+}
+.order_li_pic{
+    width:0.76rem;
+    height:0.76rem;
+    margin-right: 0.1rem;
+}
+.order_li_leinum{
+    margin-top: 0.09rem;
+}
+.order_li_btns{
+    height:0.5rem;
+}
+.order_li_btns>li{
+    float: right;
+    width:0.8rem;
+    height:0.3rem;
+    margin-top: 0.1rem;
+    line-height: 0.3rem;
+    text-align: center;
+    margin-right: 0.1rem;
+    border:1px solid #979797;
+}
+.order_li_btns>li.confirm_receivebtn,.order_li_btns>li.order_li_waitingpaybtn,.order_li_btns>li.order_li_waitingemsbtn,.order_li_btns>li.order_li_suregetthinsbtn{
+    border:1px solid #BB0505;
+    margin-right: 0.2rem;
+    background-color: #BB0505;
+    color: #FFFFFF;
+}
+    /*取消订单的样式*/
+.order_deletebtn{
+    position: absolute;
+    right:0.16rem;
+    top:-0.055rem;
+    width:0.27rem;
+    height:0.27rem;
+    cursor: pointer;
+}
+.order_deletebtn img{
+    width:100%;
+    height:auto;
+}
+.order_licancel .order_li_pic_statu{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.order_li_statutext{
+    position: absolute;
+    right:0.19rem;
+    top:0.2rem;
+}
+    /*退款成功/退款中/退款关闭/样式和取消订单的样式一样*/
+
+/*没有订单时的样式*/
+.no_order{
+    display: none;
+    background: url("../img/No_Order_bg.png") 1.02rem 0.91rem no-repeat;
+    background-size:auto 1.72rem;
+}
+.no_order.show{
+    display: block;
+}
+.no_ordertips{
+    padding-top: 2.75rem;
+    margin:0 auto;
+    text-align: center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>透明工场个人中心</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/same_style.css">
+    <link rel="stylesheet" href="../css/personal_center.css">
+    <script src="../js/jq.js"></script>
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        window.onresize=function () {
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        }
+    </script>
+</head>
+<body>
+<header class="clearfloat p-lnhght-48 p-ft-16 p-col-42 p-bg-white"><img class="p-pointer back-btn" src="../img/icon_return.png" alt="上一页">个人中心</header>
+<div id="content" class="p-ft-14 p-col-42">
+    <div class="personal_center_topbox p-col-42 p-bg-white clearfloat">
+        <div class="personal_center_pic_name clearfloat">
+            <img src="../img/icon_my.png" alt=""><span>1581111333</span>
+        </div>
+        <div class="personal_center_changeaccount p-col-42">
+            切换账号
+        </div>
+    </div>
+    <div class="per_center_myorderbox p-bg-white">
+        <a class="per_center_myordertitle p-col-42 p-ft-14">
+            <span>我的订单</span><img class="more_btnpic" src="../img/icon_into.png" alt="">
+        </a>
+        <ul class="per_center_myorderlis clearfloat">
+            <!--<li class="per_center_myorderli"><a href=""><img src="../img/" alt="待付款">待付款</a></li>
+            <li class="per_center_myorderli"><a href=""><img src="../img/" alt="待付款">待发货</a></li>
+            <li class="per_center_myorderli"><a href=""><img src="../img/" alt="待付款">已发货</a></li>-->
+            <li class="per_center_myorderli per_center_myorderlidfk"><a class="p-col-34" href="">待付款</a></li>
+            <li class="per_center_myorderli per_center_myorderlidfh"><a class="p-col-34" href="">待发货</a></li>
+            <li class="per_center_myorderli per_center_myorderliyfh"><a class="p-col-34" href="">已发货</a></li>
+        </ul>
+    </div>
+    <a href="tel:10086" class="p-col-34 p-bg-white personal_center_btnwidthpic personal_center_conntetkefu clearfloat">
+        <div class="personal_center_btn_pictext clearfloat">
+            <img src="../img/icon_service_blue.png" alt=""><span>在线客服</span>
+        </div>
+        <img class="more_btnpic" src="../img/icon_into.png" alt="">
+    </a>
+    <a href="tel:10010" class="p-col-34 p-bg-white personal_center_btnwidthpic personal_center_conntetkefu clearfloat">
+        <div class="personal_center_btn_pictext clearfloat">
+            <img src="../img/icon_add_red.png" alt=""><span>地址管理</span>
+        </div>
+        <img class="more_btnpic" src="../img/icon_into.png" alt="">
+    </a>
+</div>
+
+</body>
+</html>

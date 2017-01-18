@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>修改地址</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/same_style.css">
+    <link rel="stylesheet" href="../css/address_details_set.css">
+    <script src="../js/jq.js"></script>
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        window.onresize=function () {
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        }
+    </script>
+</head>
+<body>
+<header class="clearfloat p-lnhght-48 p-ft-16 p-col-42 p-bg-white"><img class="p-pointer back-btn" src="../img/icon_return.png" alt="上一页">修改地址</header>
+<form action="">
+    <div id="content" class="p-bg-white">
+        <ul class="address-lis p-col-42 p-lnhght-16 p-ft-14">
+            <li class="address-li p-border-bottom clearfloat address-liname">
+                <input type="text" placeholder="孔乙己名字哒哒">
+            </li>
+
+            <li class="address-li p-border-bottom clearfloat address-liphonenumber">
+                <input type="text" placeholder="15800001234">
+            </li>
+
+            <li class="address-li p-border-bottom clearfloat address-liaddress">
+                <input type="text" placeholder="北京&nbsp;北京市&nbsp;海淀区">
+            </li>
+
+            <li class="address-li p-border-bottom clearfloat address-lidetailaddress">
+                <input type="text" placeholder="五道口宇宙中心大厦B座311室">
+            </li>
+        </ul>
+        <div class="address_setto_defaultaddress clearfloat p-bg-white">
+            <input type="checkbox" id="address_setto_defaultaddress" value="yes">
+            <label class="address_setto_defaultaddresslabel" for="address_setto_defaultaddress">设为默认地址</label>
+        </div>
+    </div>
+    <div id="bottom" class="p-bg-white">
+        <button type="submit" class="add-addressli p-pointer p-ft-14 p-bg-white p-col-187 p-border-187">
+            + 保存
+        </button>
+    </div>
+
+</form>
+<script>
+//    判断获取到的下边的值是否为yes来确定是否设置为默认地址
+    console.log($('#address_setto_defaultaddress:checked').val());
+</script>
+</body>
+</html>

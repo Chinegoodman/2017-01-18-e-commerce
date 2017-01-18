@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/same_style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jq.js"></script>
+    <title>登陆</title>
+</head>
+<script>
+    document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+    window.onresize=function () {
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+    }
+</script>
+<body>
+    <header class="clearfloat p-lnhght-48 p-ft-16 p-col-42 p-bg-white"><img class="p-pointer back-btn" src="img/icon_return.png" alt="上一页">登陆</header>
+    <div id="content" class="p-ft-14">
+        <p class="p-bg-white login_contenttitle p-col-42">手机号登陆</p>
+        <div class="mobilebox p-bg-white">
+            <input type="text" id="mobile" placeholder="请输入您的手机号">
+        </div>
+        <div class="phonegetnub clearfloat p-bg-white">
+            <input type="text" id="indentifying" placeholder="请输入短信验证码">
+            <button id="button">获取验证码</button>
+        </div>
+        <div id="loginbtn" onclick="return check_id()">验证并登陆</div>
+    </div>
+</body>
+<script>
+    var bool = '';
+    var verity = '';
+
+    $(function () {
+        $('#button').on('click',get_id);
+    })
+
+
+    function get_id(){
+        button_get_phonecode();
+        var mobile = $("#mobile").val();
+        $.getJSON('{APP_PATH}index.php?m=member&c=index&a=public_checkmobile_ajax&mobile='+mobile, function(data){
+            if(data){
+                bool = data.status;
+                verity_send(data.token);
+            }
+
+        });
+    }
+    function verity_send(token){
+        var mobile = $("#mobile").val();
+        // var token = token;
+        // alert(token);
+        $.getJSON('{APP_PATH}index.php?m=member&c=index&a=public_shop_verity_send&mobile='+mobile+'&token='+token, function(data){
+            if(data.code == 200){
+                alert(data.msg);
+                verity = data.data.id_code;
+                // alert(verity);
+
+
+                //可点击获取倒计时
+                button_get_phonecode();
+
+            } else {
+                alert('短信发送失败');
+            }
+        });
+    }
+    function check_id(){
+        if(bool){
+            register();
+        } else {
+            login();
+        }
+    }
+    function register(){
+        var mobile = $("#mobile").val();
+        var indentifying = $("#indentifying").val();
+        // var token = token;
+        // alert(token);
+        $.ajax({
+            type:"post",
+            url:"{APP_PATH}index.php?m=member&c=index&a=api_shop_register",
+            data:{mobile:mobile,mobile_verity:indentifying,dosubmit:1,verity:verity},
+            async:true,
+            dataType:"json",
+            success(data){
+                if(data.code == 200){
+                    alert(data.msg);
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+    function login(){
+        var mobile = $("#mobile").val();
+        var indentifying = $("#indentifying").val();
+        // var token = token;
+        // alert(token);
+        $.ajax({
+            type:"post",
+            url:"{APP_PATH}index.php?m=member&c=index&a=api_shop_login",
+            data:{mobile:mobile,mobile_verity:indentifying,dosubmit:1,verity:verity},
+            async:true,
+            dataType:"json",
+            success(data){
+                if(data.code == 200){
+                    alert(data.msg);
+                } else {
+                    register();
+                }
+            }
+        });
+    }
+
+    //可点击获取倒计时方法
+    function button_get_phonecode() {
+        var waittime=10;
+        var time1;
+        $('#button').off('click',get_id);
+        time1=setInterval(function () {
+            if (waittime>0){
+                $('#button').html('重新获取('+waittime+'s)');
+                waittime--;
+            }else {
+                $('#button').html('获取验证码');
+                clearTimeout(time1);
+                $('#button').on('click',get_id);
+            }
+        },1000);
+    }
+</script>
+</html>

@@ -1,0 +1,187 @@
+html{
+    font-size: 100px;
+}
+html,body{
+    height:100%;
+    background-color: #F2F2F2;
+}
+body{
+}
+header{
+    height:48px;
+    width:100%;
+    text-align: center;
+    /*margin-bottom: 8px;*/
+    position: fixed;
+    top:0;
+    z-index: 50;
+}
+.back-btn{
+    float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+    width:9px;
+    height:16px;
+}
+/*头部结束*/
+#content{
+    /*height:100%;*/
+    padding-top: 56px;
+}
+.order_status{
+    padding-left:0.2rem;
+}
+.order_time_numb{
+    padding:0.15rem 0.2rem 0.15rem 0;
+    position: relative;
+
+    /*border-bottom: none;*/
+}
+.order_time{
+    /*padding:0.15rem 0.2rem 0.15rem 0;*/
+    margin-bottom: 0.03rem;
+}
+.order_time>*{
+    float: left;
+}
+.order_time>p{
+    margin-right: 0.05rem;
+}
+.order_numb>*{
+    float: left;
+}
+.order_status_words{
+    position: absolute;
+    right:0.2rem;
+    top:0.15rem;
+}
+.order_tips{
+    /*padding:0.15rem 0.2rem 0.15rem 0;*/
+    padding:0.18rem 0.2rem 0.18rem 0;
+    position: relative;
+}
+.orderbtns{
+    position: absolute;
+    right:0.2rem;
+    top:0.1rem;
+}
+.orderbtns>*{
+    float: left;
+    line-height: 0.3rem;
+    height:0.3rem;
+}
+.cancleorderbtn{
+    border:1px solid #979797;
+    padding:0 0.12rem;
+    margin-right: 0.1rem;
+    border-radius: 0.02rem;
+}
+.paymoneytoorderbtn{
+    border:1px solid #BB0505;
+    padding:0 0.05rem;
+    border-radius: 0.02rem;
+}
+/*.order_tips>p{
+    margin-bottom: 0.05rem;
+}
+.order_tips_time>*{
+    float: left;
+}
+.order_tips_time>p{
+    margin-right: 0.05rem;
+}
+.order_tips_morelink{
+    display: block;
+    position: absolute;
+    right:0.2rem;
+    top:0.23rem;
+    background: #000 url("../img/");
+    width:0.09rem;
+    height:0.16rem;
+}*/
+/*
+
+.order_connect_confirmreceive {
+    margin-top: 0.06rem;
+    padding-left: 0.2rem;
+}
+.order_buythings_li{
+    padding:0.1rem 0.2rem 0.1rem 0;
+    position: relative;
+}
+.order_buythings_li>*{
+    float: left;
+}
+.order_buythings_li>img{
+    width:0.76rem;
+    height:0.76rem;
+    margin-right: 0.1rem;
+}
+.order_buythings_number {
+    position: absolute;
+    right:0.2rem;
+    top:0.1rem;
+}
+
+.order_connect_confirmreceive_btns{
+    padding:0.1rem 0.2rem 0.1rem 0;
+}
+.order_connect_confirmreceive_btns>*{
+    float: right;
+}
+.order_connect_shop{
+    width:0.8rem;
+    height:0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    border:1px solid #979797;
+    color: #535353;
+    !*margin-right: 0.1rem;*!
+    border-radius: 0.02rem;
+}
+.order_confirmreceive{
+    width:0.8rem;
+    height:0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    border:1px solid #B90012;
+    background-color: #B90012;
+    color: #FDFAFA;
+}
+
+.order_personinfor_pay{
+    margin-top: 0.08rem;
+    padding-left: 0.2rem;
+}
+.order_personinfor{
+    padding-bottom: 0.15rem;
+    padding-top: 0.15rem;
+}
+.order_personinfor_name_num{
+    margin-bottom: 0.03rem;
+}
+.order_personinfor_name_num>*{
+    float: left;
+}
+.order_personinfor_name_num>span{
+    margin-right: 0.15rem;
+}
+.order_personinfor_name_num>span:last-child{
+    margin-right: 0;
+}
+.order_pay_infor{
+    padding:0.15rem 0;
+}
+.order_pay_infor>li{
+    margin-bottom: 0.03rem;
+}
+.order_pay_infor>li:last-child{
+    margin-bottom: 0;
+}
+.order_pay_infor>li>*{
+    float: left;
+}
+.order_personinfor_allpaytips{
+    padding:0.15rem;
+    padding-left: 0;
+}*/

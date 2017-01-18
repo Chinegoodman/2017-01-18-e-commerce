@@ -1,0 +1,86 @@
+html{
+	font-size: 100px;
+}
+html,body{
+	height:100%;
+	background-color: #F2F2F2;
+}
+body{
+}
+header{
+	width:100%;
+	text-align: center;
+	/*margin-bottom: 8px;*/
+	position: fixed;
+	top:0;
+	z-index: 50;
+	height:48px;
+	line-height: 48px;
+	/*height:0.48rem;
+	line-height: 0.48rem;*/
+}
+.back-btn{
+	float: left;
+	margin-left: 10px;
+	margin-top: 16px;
+	width:9px;
+	height:16px;
+}
+/*头部结束*/
+#content{
+	/*height:100%;*/
+	/*padding-top: 0.56rem;*/
+	padding-top: 56px;
+}
+.login_contenttitle{
+	height:0.46rem;
+	line-height: 0.46rem;
+	padding-left: 0.20rem;
+	border-bottom: 1px solid #E2E2E2;
+}
+.mobilebox{
+	padding-left: 0.20rem;
+	height:0.47rem;
+	padding-bottom: 1px;
+}
+input{
+	height:0.46rem;
+	width:100%;
+	outline:none;
+	border:none;
+}
+#mobile{
+	border-bottom: 1px solid #E2E2E2;
+}
+.phonegetnub{
+	padding-left: 0.20rem;
+	position: relative;
+}
+#button{
+	position: absolute;
+	top:0.06rem;
+	right:0.20rem;
+	width:1.00rem;
+	height:0.34rem;
+	background: #949494;
+	color: #fff;
+	outline:none;
+	border:none;
+	border-radius: 0.04rem;
+}
+input::-webkit-input-placeholder{
+	color: #A0A0A0;
+}
+#loginbtn{
+	width:3.35rem;
+	height:0.4rem;
+	background-color: #BB0505;
+	color: #fff;
+	font-size: 0.16rem;
+	line-height:0.4rem;
+	outline:none;
+	border:none;
+	border-radius: 0.04rem;
+	margin:0.21rem auto 0;
+	text-align: center;
+}

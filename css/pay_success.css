@@ -1,0 +1,85 @@
+html{
+    font-size: 100px;
+}
+html,body{
+    height:100%;
+    background-color: #F2F2F2;
+}
+body{
+}
+header{
+    height:48px;
+    width:100%;
+    text-align: center;
+    /*margin-bottom: 8px;*/
+    position: fixed;
+    top:0;
+    z-index: 50;
+}
+.back-btn{
+    float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+    width:9px;
+    height:16px;
+}
+/*头部结束*/
+#content{
+    /*height:100%;*/
+    padding-top: 56px;
+}
+.success_show_link{
+    padding:0.182rem 0 0.2rem;
+}
+.success_showpic{
+    display: block;
+    margin:0.182rem auto 0.08rem;
+    height:1.02rem;
+    /*width:100px;*/
+}
+.success_show_link>p{
+    height:0.18rem;
+    line-height: 0.18rem;
+    font-size: 0.16rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+.check_order{
+    display: block;
+    width:0.8rem;
+    height:0.3rem;
+    border:1px solid #979797;
+    text-align: center;
+    line-height: 0.3rem;
+    margin:0.2rem auto 0;
+    border-radius: 0.03rem;
+}
+.orderproduct_show{
+    margin-top: 0.08rem;
+}
+.orderproduct_show_li{
+    padding:0.1rem 0.2rem;
+    position: relative;
+}
+.orderproduct_show_li>*{
+    float: left;
+}
+.orderproduct_show_li_pic{
+    width:0.76rem;
+    height:0.76rem;
+    margin-right: 0.1rem;
+}
+.order_buythings_details{
+    padding-top: 0.06rem;
+}
+.order_buythings_details>p{
+    /*margin-bottom: ;*/
+}
+.order_buythings_details>div{
+    margin-top: 0.09rem;
+}
+.orderproduct_show_tip{
+    position: absolute;
+    right:0.2rem;
+    top:0.22rem;
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>透明工场地址管理页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/same_style.css">
+    <link rel="stylesheet" href="../css/my_order_page.css">
+    <script src="../js/jq.js"></script>
+    <script src="../js/my_order_page.js"></script>
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        window.onresize=function () {
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75 < 256/3 ? 256/3:document.documentElement.clientWidth/3.75+'px';
+        }
+    </script>
+</head>
+<body>
+<header class="clearfloat p-lnhght-48 p-ft-16 p-col-42 p-bg-white"><img class="p-pointer back-btn" src="../img/icon_return.png" alt="上一页">我的订单
+    <ul class="order_top_status_lis p-bg-white clearfloat">
+        <li class="p-ft-14 p-lnhght-25 p-col-42 selected">全部</li>
+        <li class="p-ft-14 p-lnhght-25 p-col-42">待付款</li>
+        <li class="p-ft-14 p-lnhght-25 p-col-42">待发货</li>
+        <li class="p-ft-14 p-lnhght-25 p-col-42">已发货</li>
+    </ul>
+</header>
+<div id="content" class="p-ft-14 p-col-42">
+    <!--全部订单-->
+    <ul class="allorder_lis ">
+        <!--订单已发货-->
+        <li class="order_li p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+               <li class="confirm_receivebtn">确认收货</li>
+                <li class="check_wuliubtn">查看物流</li>
+            </ul>
+        </li>
+        <!--交易成功-->
+        <li class="order_li p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-26127 p-ft-13">交易成功</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="rate_receivebtn">评价</li>
+                <li class="check_wuliubtn">查看物流</li>
+            </ul>
+        </li>
+
+
+        <!--订单已取消-->
+        <li class="order_li order_licancel p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+                <!--删除按钮-->
+                <div class="order_deletebtn">
+                    <img src="../img/icon_delete.png" alt="垃圾桶">
+                </div>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已取消</div>
+            </div>
+        </li>
+        <!--订单退款成功-->
+        <li class="order_li order_licancel order_limoneybacksuccess p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+                <!--删除按钮-->
+                <div class="order_deletebtn">
+                    <img src="../img/icon_delete.png" alt="垃圾桶">
+                </div>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">退款成功</div>
+            </div>
+        </li>
+        <!--订单退款中-->
+        <li class="order_li order_licancel order_limoneybacking p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+                <!--删除按钮-->
+                <div class="order_deletebtn">
+                    <img src="../img/icon_delete.png" alt="垃圾桶">
+                </div>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">退款中</div>
+            </div>
+        </li>
+        <!--订单退款关闭-->
+        <li class="order_li order_licancel order_limoneybacking p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+                <!--删除按钮-->
+                <div class="order_deletebtn">
+                    <img src="../img/icon_delete.png" alt="垃圾桶">
+                </div>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">退款关闭</div>
+            </div>
+        </li>
+
+
+        <!--订单待付款-->
+        <li class="order_li order_li_waitingpay p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待付款</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingpaybtn">付款<span>28.02</span></li>
+                <li class="order_li_cancelpaybtn">取消订单</li>
+            </ul>
+        </li>
+
+        <!--订单待发货-->
+        <li class="order_li order_li_waitingems p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingemsbtn">确认收货</li>
+                <li class="order_li_cancelemsbtn">取消订单</li>
+            </ul>
+        </li>
+
+        <!--订单已发货-->
+        <li class="order_li order_li_havepost p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_suregetthinsbtn">确认收货</li>
+                <li class="order_li_checkemsbtn">查看物流</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--待付款-->
+    <ul class="allorder_lis ">
+        <!--订单待付款-->
+        <li class="order_li order_li_waitingpay p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待付款</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingpaybtn">付款<span>28.02</span></li>
+                <li class="order_li_cancelpaybtn">取消订单</li>
+            </ul>
+        </li>
+        <!--订单待付款-->
+        <li class="order_li order_li_waitingpay p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待付款</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingpaybtn">付款<span>28.02</span></li>
+                <li class="order_li_cancelpaybtn">取消订单</li>
+            </ul>
+        </li>
+        <!--订单待付款-->
+        <li class="order_li order_li_waitingpay p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待付款</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingpaybtn">付款<span>28.02</span></li>
+                <li class="order_li_cancelpaybtn">取消订单</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--待发货-->
+    <ul class="allorder_lis ">
+        <!--订单待发货-->
+        <li class="order_li order_li_waitingems p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingemsbtn">确认收货</li>
+                <li class="order_li_cancelemsbtn">取消订单</li>
+            </ul>
+        </li>
+        <!--订单待发货-->
+        <li class="order_li order_li_waitingems p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingemsbtn">确认收货</li>
+                <li class="order_li_cancelemsbtn">取消订单</li>
+            </ul>
+        </li>
+        <!--订单待发货-->
+        <li class="order_li order_li_waitingems p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">待发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_waitingemsbtn">确认收货</li>
+                <li class="order_li_cancelemsbtn">取消订单</li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <!--已发货-->
+    <ul class="allorder_lis ">
+        <!--订单已发货-->
+        <li class="order_li order_li_havepost p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_suregetthinsbtn">确认收货</li>
+                <li class="order_li_checkemsbtn">查看物流</li>
+            </ul>
+        </li>
+        <!--订单已发货-->
+        <li class="order_li order_li_havepost p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_suregetthinsbtn">确认收货</li>
+                <li class="order_li_checkemsbtn">查看物流</li>
+            </ul>
+        </li>
+        <!--订单已发货-->
+        <li class="order_li order_li_havepost p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_suregetthinsbtn">确认收货</li>
+                <li class="order_li_checkemsbtn">查看物流</li>
+            </ul>
+        </li>
+        <!--订单已发货-->
+        <li class="order_li order_li_havepost p-bg-white clearfloat">
+            <div class="order_li_code clearfloat">
+                <p>订单编号：&nbsp;</p>
+                <p><span>A</span> <span>16</span> <span>1225</span> <span>1225</span> <span>3636</span></p>
+            </div>
+            <div class="order_li_pic_statu clearfloat">
+                <img class="order_li_pic" src="../img/shopping.jpg" alt="产品图">
+                <div class="order_li_names">
+                    <p class="p-ft-15 p-lnhght-17">天津完全唐杨村糕干</p>
+                    <p class="p-ft-15 p-lnhght-17">茯苓糕干</p>
+                    <div class="order_li_leinum p-ft-12 p-lnhght-15 p-col-160">共<span>1</span>种商品</div>
+                </div>
+                <div class="order_li_statutext p-col-187 p-ft-13">已发货</div>
+            </div>
+            <ul class="order_li_btns clearfloat">
+                <li class="order_li_suregetthinsbtn">确认收货</li>
+                <li class="order_li_checkemsbtn">查看物流</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <!--无订单-->
+    <div class="no_order show">
+        <p class="no_ordertips p-lnhght-16 p-col-42 p-ft-14">您还没有相关的订单</p>
+    </div>
+</div>
+
+</body>
+</html>
